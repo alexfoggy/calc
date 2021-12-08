@@ -1,0 +1,49 @@
+// Margins
+@for $i from 0 through 20 {
+  .mt-#{$i} {
+    margin-top: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .ml-#{$i} {
+    margin-left: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .mr-#{$i} {
+    margin-right: #{$i}rem !important;
+  }
+}
+
+// Paddings
+@for $i from 0 through 20 {
+  .pt-#{$i} {
+    padding-top: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pl-#{$i} {
+    padding-left: #{$i}rem !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pr-#{$i} {
+    padding-right: #{$i}rem !important;
+  }
+}

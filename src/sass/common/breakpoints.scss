@@ -1,0 +1,25 @@
+@mixin respondto($device) {
+  @each $name, $point in $breakpoints {
+    @if $name == $device {
+      @media #{$point} {
+        @content;
+      }
+    }
+  }
+}
+
+
+
+$breakpoints: (
+  largeDesktop: '(min-width: 1920px)',
+  lgDesktop: '(min-width: 1500px)',
+  mdDesktop: '(max-width: 1499px)',
+  desktop: '(min-width: 1200px)',
+  desktopSmall: '(max-width: 1199px)',
+  onlyDesktop: '(min-width: 992px)',
+  maxTablet: '(max-width: 991px)',
+  tablet: '(min-width: 768px)',
+  phone: '(max-width: 767px)',
+  phoneSmall: '(max-width: 575px)',
+  iphone5: '(max-width: 480px)'
+);

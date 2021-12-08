@@ -1,0 +1,32 @@
+.breadcrumbs-wrapper {
+	padding: 2rem 0 1rem;
+}
+
+.breadcrumbs {
+	li {
+    // font-family: $font-bold;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+
+      &::after {
+        background: url('../img/icons/right-arrow-sirocco.svg') center center/ 0.6rem 0.9rem no-repeat;
+        content: '';
+        display: inline-block;
+        height: 0.9rem;
+        width: 0.6rem;
+      }
+    }
+	}
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}

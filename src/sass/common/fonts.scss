@@ -1,0 +1,37 @@
+@mixin font-face($font-family, $file-path, $font-weight:'normal', $font-style:'normal') {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+  .font-#{ $font-family } {
+    font-family: $font-family;
+  }
+}
+
+
+
+@include font-face('Montserrat-Regular', '../fonts/Montserrat-Regular/Montserrat-Regular');
+@include font-face('Montserrat-Bold', '../fonts/Montserrat-Bold/Montserrat-Bold');
+@include font-face('Montserrat-Light', '../fonts/Montserrat-Light/Montserrat-Light');
+@include font-face('Montserrat-SemiBold', '../fonts/Montserrat-SemiBold/Montserrat-SemiBold');
+@include font-face('Montserrat-Medium', '../fonts/Montserrat-Medium/Montserrat-Medium');
+
+
+// Fonts variables
+$font-regular: 'Montserrat-Regular', sans-serif;
+$font-bold: 'Montserrat-Bold', sans-serif;
+$font-light: 'Montserrat-Light', sans-serif;
+$font-semibold: 'Montserrat-SemiBold', sans-serif;
+$font-medium: 'Montserrat-Medium', sans-serif;

@@ -1,0 +1,16 @@
+  <div id="fixed-overlay"></div>
+
+	<script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    if ( $(window).width() >= 768 ) {
+      $('a[href^="tel:"], a[href^="mailto:"]').click(function() {
+        event.preventDefault();
+        window.location.href = "/contacts.html";
+      });
+    };
+  </script>
+  
+</body>
+</html>
