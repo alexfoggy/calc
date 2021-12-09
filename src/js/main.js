@@ -16,3 +16,12 @@ $('.calc-block form input').on('keyup',function(){
      });
     
 }) 
+
+
+$('.add-to-fav').on('click',function(){
+    $(this).toggleClass('active');
+})
+
+$('.fav-status').on('click',function(){
+    $(this).toggleClass('active');
+})

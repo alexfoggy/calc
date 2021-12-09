@@ -1,0 +1,58 @@
+@@include('./templates/common/top.html')
+@@include('./templates/common/main-header.html')
+
+<section class="calculator-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="">Главная</a>
+            <span> <svg>
+                <use xlink:href="/svg/sprite.svg#arr-right"></use>
+            </svg></span>
+            <a href="" class="active">Избранные</a>
+           
+        </div>
+        </div>
+       <div class="container">
+           <div class="ttl mb-5 mt-4">Избранные</div>
+           <div class="list-fav">
+               <div class="fav-item">
+                   <a href="">
+                       Калькулятор НДС
+                   </a>
+                   <span class="fav-status">
+                   <svg>
+                    <use xlink:href="/svg/sprite.svg#saved"></use>
+                </svg>
+            </span>
+               </div>
+               <div class="fav-item">
+                   <a href="">
+                       Калькулятор того сего
+                   </a>
+                   <span class="fav-status active">
+                    <svg>
+                     <use xlink:href="/svg/sprite.svg#saved"></use>
+                 </svg>
+             </span>
+               </div>
+           </div>
+       </div>
+       <div class="container">
+       <div class="reg-info position-relative overflow-hidden">
+           <h3>Зарегистрируйся и смотри свои избранные с любого устройтва</h3>
+           <h4>Используя социальные сети</h4> 
+           <div class="social-in">
+                <div class="facebook"><img src="img/icons/fb.svg" alt=""></div>
+                <div class="google"><img src="img/icons/google.svg" alt=""></div>
+            </div>
+            <div class="icon-background">
+                <svg>
+                  <use xlink:href="/svg/sprite.svg#protection"></use>
+              </svg>
+              </div>
+        </div>
+    </div>
+</section>
+
+@@include('./templates/common/main-footer.html')
+@@include('./templates/common/bottom.html')
