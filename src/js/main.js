@@ -46,3 +46,14 @@ $('.droppy-action').on('click',function(){
     $(this).toggleClass('active');
     $(this).closest('.with-drop').find('.droppy').slideToggle();
 })
+
+$('.isotopegrid').isotope({
+    // options
+ 
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+        gutter: 46,
+
+      },
+  });

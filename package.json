@@ -35,6 +35,7 @@
     "swiper": "^5.4.5"
   },
   "dependencies": {
+    "isotope-layout": "^3.0.6",
     "normalize.css": "^8.0.1",
     "svgxuse": "^1.2.6"
   },

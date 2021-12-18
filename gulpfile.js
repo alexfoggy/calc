@@ -166,7 +166,8 @@ function jsLibs() {
         'node_modules/svgxuse/svgxuse.js',
         'node_modules/body-scroll-lock/lib/bodyScrollLock.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-        'node_modules/swiper/js/swiper.min.js'
+        'node_modules/swiper/js/swiper.min.js',
+        'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglifyJs())
