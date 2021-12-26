@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 $('.you-used h3').on('click',function(){
     $(this).parent().toggleClass('active');
 })
@@ -57,3 +59,11 @@ $('.isotopegrid').isotope({
 
       },
   });
+
+
+$('.button-open').on('click',function(){
+    let open = $(this).data('open');
+    $('.'+open).fadeIn();
+})
+
+})

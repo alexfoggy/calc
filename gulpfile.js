@@ -164,9 +164,8 @@ function jsLibs() {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/svgxuse/svgxuse.js',
-        'node_modules/body-scroll-lock/lib/bodyScrollLock.js',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-        'node_modules/swiper/js/swiper.min.js',
+        //'node_modules/body-scroll-lock/lib/bodyScrollLock.js',
+        //'node_modules/typed.js/lib/typed.min.js',
         'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
         ])
         .pipe(concat('libs.min.js'))
@@ -178,9 +177,8 @@ function jsLibs() {
 function cssLibs() {
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
         'node_modules/bootstrap/dist/css/bootstrap.css',
-        'node_modules/swiper/css/swiper.min.css'
+        //'node_modules/swiper/css/swiper.min.css'
         ])
         .pipe(concatCss('libs.min.css'))        
         .pipe(

@@ -37,7 +37,8 @@
   "dependencies": {
     "isotope-layout": "^3.0.6",
     "normalize.css": "^8.0.1",
-    "svgxuse": "^1.2.6"
+    "svgxuse": "^1.2.6",
+    "typed.js": "^2.0.12"
   },
   "scripts": {
     "test": "mocha"
