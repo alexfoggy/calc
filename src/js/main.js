@@ -67,3 +67,7 @@ $('.button-open').on('click',function(){
 })
 
 })
+
+$('.action-setting').on('click',function(){
+    $(this).toggleClass('active');
+})

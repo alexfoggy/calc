@@ -205,7 +205,7 @@ body {
     position: absolute;
     right: -100px;
     bottom: -50px;
-
+    z-index: -1;
     svg {
         width: 200px;
         fill: rgba(221, 221, 221, 0.383);
@@ -251,6 +251,7 @@ body {
         margin-right: 14px;
         margin-bottom: 14px;
         font-weight: 500;
+        background-color: #fff;
         transition: 0.3s;
         box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
@@ -617,11 +618,13 @@ body {
             margin: 6px 0;
             font-size: 16px;
             color: #5c5c5c;
+            width: 35%;
+            margin-right: 20px;
+            text-align: right;
         }
 
         .input-value {
             position: relative;
-            margin-top: 20px;
 
             .error {
                 position: absolute;
@@ -841,14 +844,16 @@ body {
     width: 100%;
     background-color: #f1c40f;
     padding: 16px;
+    display: flex;
+    justify-content: center;
     border-radius: 12px;
 
     a:last-child {
-        margin-bottom: 0;
+        margin-right: 0;
     }
 
     a {
-        margin-bottom: 20px;
+        margin-right: 20px;
         display: block;
 
         &:hover {
@@ -868,13 +873,102 @@ body {
     }
 
     .social-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         svg {
             fill: #fff;
             stroke: none;
         }
     }
 }
-
+.acc {
+    margin-top: 50px;
+}
+.settings-row {
+    display: flex;
+    flex-direction: column;
+    .setting-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .setting-block-action {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            &.turned-off {
+                color: #e74c3c;
+            }
+            &.turned-on {
+                color: #2ecc71;
+            }
+        }
+        .action-setting {
+            position: relative;
+            margin: 0 20px;
+            cursor: pointer;
+            width: 70px;
+            height: 32px;
+            background-color: rgb(236, 236, 236);
+            border-radius: 40px;
+            &.active {
+                &::before {
+                left: calc(100% - 34px);
+                background-color: #2ecc71;
+                
+            }
+        }   
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 38px;
+                width: 38px;
+                background-color: #e74c3c;
+                border-radius: 50%;
+                transition: 0.4s;
+                
+            }
+        }
+    }
+}
+.panel {
+    padding: 20px 0;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 12px;
+    a {
+        display: block;
+        padding: 6px 10px;
+        margin: 10px;
+        border-radius: 8px;
+        color: #222;
+        transition: 0.3s;
+        &:hover {
+            background-color: #3742fa;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    h2 {
+        padding: 0 20px;
+        font-size: 22px;
+        color: #222;
+        font-weight: 600;
+    }
+    h3 {
+        padding: 0 20px;
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 30px;
+    }
+}
 .main-footer {
     margin-top: 50px;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
@@ -1688,6 +1782,11 @@ body {
 }
 
 @media (max-width:990px) {
+    .calc-block form .title-input {
+        margin-right: 0;
+        width: 100%;
+        text-align: left !important;
+    }
     .popup .block-popup {
         width: 90%;
         padding: 20px;
