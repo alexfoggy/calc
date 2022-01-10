@@ -205,14 +205,7 @@ body {
     margin-bottom: 30px;
   }
 }
-.with-droppy-desktop .droppy-block ul a {
-  &::before {
-    display: none;
-  }
-  &::after {
-    display: none;
-  }
-}
+
 .menu {
   padding: 0;
   margin: 0;
@@ -486,8 +479,13 @@ body {
 
       a {
         margin: 0;
-        padding: 4px 12px;
+        padding: 8px 12px;
         display: block;
+        position: relative;
+        &:hover {
+          background-color: #f3f3f3;
+
+        }
       }
     }
   }
@@ -542,9 +540,21 @@ body {
     }
   }
 }
-
+.fixed-center {
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 99;
+  transition: 0.5s;
+  transform: translate(-50%,-20%);
+  display: none;
+  &.active {
+    top: 50%;
+    transform: translate(-50%,-50%);
+  } 
+}
 .breadcrumbs {
-  padding: 20px 0;
+  padding: 10px 0;
 
   svg {
     width: 12px;
@@ -623,6 +633,7 @@ body {
       font-size: 70px;
       text-transform: uppercase;
       font-weight: bold;
+      z-index: -1;
     }
 
     .col-lg-4 {
@@ -1809,7 +1820,12 @@ body {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, .1) 0 1px 5px 0, rgba(0, 0, 0, .06) 0 1px 2px 0;
   background-color: #e74c3c;
-
+  & .fixed-center {
+    svg {
+      fill: #fff;
+      stroke: transparent;
+    }
+  } 
   svg {
     width: 200px;
     height: 100px;
@@ -1869,6 +1885,11 @@ body {
 }
 
 @media (max-width:990px) {
+  .text {
+    img {
+      width: 100%;
+    }
+  }
   .calc-block form .title-input {
     margin-right: 0;
     width: 100%;
@@ -2195,6 +2216,7 @@ body {
     transform-origin: left;
     top: 0;
     transition: 0.5s;
+    overflow-y: auto;
     width: 80%;
     height: 100vh;
     background-color: #fff;

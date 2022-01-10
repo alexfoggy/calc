@@ -158,12 +158,6 @@ body {
 .calcs .col-lg-6 {
   margin-bottom: 30px; }
 
-.with-droppy-desktop .droppy-block ul a::before {
-  display: none; }
-
-.with-droppy-desktop .droppy-block ul a::after {
-  display: none; }
-
 .menu {
   padding: 0;
   margin: 0;
@@ -358,8 +352,11 @@ body {
       list-style: none; }
       .with-droppy-desktop .droppy-block ul a {
         margin: 0;
-        padding: 4px 12px;
-        display: block; }
+        padding: 8px 12px;
+        display: block;
+        position: relative; }
+        .with-droppy-desktop .droppy-block ul a:hover {
+          background-color: #f3f3f3; }
 
 .you-used {
   display: none;
@@ -396,8 +393,20 @@ body {
           color: #3742fa;
           text-decoration: none; }
 
+.fixed-center {
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 99;
+  transition: 0.5s;
+  transform: translate(-50%, -20%);
+  display: none; }
+  .fixed-center.active {
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
 .breadcrumbs {
-  padding: 20px 0; }
+  padding: 10px 0; }
   .breadcrumbs svg {
     width: 12px;
     height: 12px;
@@ -456,7 +465,8 @@ body {
       opacity: 0.1;
       font-size: 70px;
       text-transform: uppercase;
-      font-weight: bold; }
+      font-weight: bold;
+      z-index: -1; }
     .calc-block form .col-lg-4 {
       align-items: flex-start !important; }
     .calc-block form button {
@@ -1305,6 +1315,9 @@ body {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 5px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
   background-color: #e74c3c; }
+  .info-alert .fixed-center svg {
+    fill: #fff;
+    stroke: transparent; }
   .info-alert svg {
     width: 200px;
     height: 100px;
@@ -1348,6 +1361,8 @@ body {
       margin-right: 10px; }
 
 @media (max-width: 990px) {
+  .text img {
+    width: 100%; }
   .calc-block form .title-input {
     margin-right: 0;
     width: 100%;
@@ -1542,6 +1557,7 @@ body {
     transform-origin: left;
     top: 0;
     transition: 0.5s;
+    overflow-y: auto;
     width: 80%;
     height: 100vh;
     background-color: #fff;

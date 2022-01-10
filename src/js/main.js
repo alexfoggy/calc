@@ -4,22 +4,23 @@ $('.you-used h3').on('click',function(){
     $(this).parent().toggleClass('active');
 })
 
-$('.calc-block form input').on('keyup',function(){
-
-    $(".calc-block form input").each(function() {
-        var element = $(this);
-        if (element.val() == "") {
-            $('.calc-block form button').removeClass('active');
-            $('.calc-block form button').prop( "disabled", true);
-
-        }
-        else {
-            $('.calc-block form button').addClass('active');
-            $('.calc-block form button').prop( "disabled", false );
-        }
-     });
-    
-}) 
+// $('.calc-block form input[type="text"]').on('keyup',function(){
+//     let i = 0;
+//     $(".calc-block form input").each(function() {
+//         var element = $(this);
+//         if (element.val() == "") {
+//             i++;
+//         }
+//      }); 
+//      if(i == 0){
+//          $('.calc-block form button').prop('disabled',true);
+//          $('.calc-block form button').addClass('active');
+//      }
+//      else {
+//         $('.calc-block form button').prop('disabled',false);
+//         $('.calc-block form button').removeClass('active');
+//      }
+// }); 
 
 
 $('.add-to-fav').on('click',function(){
