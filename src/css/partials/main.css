@@ -1306,6 +1306,13 @@ body {
 .mobile-menu {
   display: none; }
 
+.sitemapBlock a {
+  display: block;
+  margin: 10px 0;
+  color: #3742fa;
+  font-size: 18px;
+  font-weight: normal; }
+
 .info-alert {
   width: 50%;
   margin: 40px auto;
