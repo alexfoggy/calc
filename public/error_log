@@ -1,0 +1,6 @@
+[01-Jul-2021 15:55:55 Europe/Chisinau] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 262144 bytes) in /home/webitveritan/public_html/vendor/laravel/framework/src/Illuminate/Support/Str.php on line 177
+[12-Jul-2021 16:51:01 Europe/Chisinau] PHP Fatal error:  Cannot use App\Models\ReviewsGoods as ReviewsGoods because the name is already in use in /home/webitveritan/public_html/app/Http/Controllers/Front/CatalogController.php on line 17
+[19-Jul-2021 11:26:45 Europe/Chisinau] PHP Parse error:  syntax error, unexpected '}' in /home/webitveritan/public_html/app/Support/helpers.php on line 2330
+[19-Jul-2021 11:26:49 Europe/Chisinau] PHP Parse error:  syntax error, unexpected '}' in /home/webitveritan/public_html/app/Support/helpers.php on line 2330
+[19-Jul-2021 11:26:51 Europe/Chisinau] PHP Parse error:  syntax error, unexpected '}' in /home/webitveritan/public_html/app/Support/helpers.php on line 2330
+[19-Jul-2021 11:26:55 Europe/Chisinau] PHP Parse error:  syntax error, unexpected '}' in /home/webitveritan/public_html/app/Support/helpers.php on line 2330

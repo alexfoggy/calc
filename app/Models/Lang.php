@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Lang extends Model
+{
+    protected $table = 'lang';
+    protected $fillable = [
+        'lang',
+        'descr'
+    ];
+
+    public function bannerTop()
+    {
+        return $this->hasOne('\App\Models\BannerTop', 'lang_id', 'id');
+    }
+}
