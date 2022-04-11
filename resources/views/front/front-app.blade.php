@@ -60,10 +60,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="{{asset('front-assets/css/libs.min.css?v=').env('CSS_LIB_VER') }}">
-    <link rel="stylesheet" href="{{asset('front-assets/css/libs.min.css?v=') }}">
     <link rel="stylesheet" href="{{asset('front-assets/css/main.css?v=').env('CSS_VER') }}">
     <link rel="stylesheet" href="{{asset('front-assets/css/validate.css')}}">
-    <link rel="stylesheet" href="{{asset('front-assets/css/notiflix-2.5.0.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('front-assets/css/notiflix-2.5.0.min.css')}}">--}}
 </head>
 <body>
 
@@ -77,16 +76,16 @@
 
 <script src="{{asset('front-assets/js/libs.min.js?v=').env('JS_LIB_VER') }}"></script>
 <script src="{{asset('front-assets/js/main.js?v=').env('JS_VER') }}"></script>
-<script src="{{asset('front-assets/js/notiflix-2.5.0.min.js')}}"></script>
-<script src="{{asset('front-assets/js/recaptcha.js')}}"></script>
+{{--<script src="{{asset('front-assets/js/notiflix-2.5.0.min.js')}}"></script>--}}
+{{--<script src="{{asset('front-assets/js/recaptcha.js')}}"></script>--}}
 <script src="{{asset('front-assets/js/ajax-scripts.js')}}"></script>
-<script src="https://www.google.com/recaptcha/api.js?render={{ env('RE_CAP_SITE') }}"></script>
+{{--<script src="https://www.google.com/recaptcha/api.js?render={{ env('RE_CAP_SITE') }}"></script>--}}
 
 @stack('slider-range')
-<script>
-    getRecaptcha('/allpages', 'recaptcha-main');
-/*    getRecaptcha('/contacts', 'recaptcha-contacts-form')*/
-</script>
+{{--<script>--}}
+{{--    getRecaptcha('/allpages', 'recaptcha-main');--}}
+{{--/*    getRecaptcha('/contacts', 'recaptcha-contacts-form')*/--}}
+{{--</script>--}}
 
 <div id="fixed-overlay"></div>
 
