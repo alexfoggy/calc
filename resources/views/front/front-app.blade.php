@@ -81,25 +81,24 @@
 <script src="{{asset('front-assets/js/ajax-scripts.js')}}"></script>
 {{--<script src="https://www.google.com/recaptcha/api.js?render={{ env('RE_CAP_SITE') }}"></script>--}}
 
-@stack('slider-range')
 {{--<script>--}}
 {{--    getRecaptcha('/allpages', 'recaptcha-main');--}}
 {{--/*    getRecaptcha('/contacts', 'recaptcha-contacts-form')*/--}}
 {{--</script>--}}
 
-<div id="fixed-overlay"></div>
+{{--<div id="fixed-overlay"></div>--}}
 
-<script>
-    let lang = $('html').attr('lang');
-    if ( $(window).width() > 768 ) {
-        $('a[href^="tel:"], a[href^="mailto:"]').click(function() {
-            event.preventDefault();
-            window.location.href = '/' + lang + '/contacts';
-        });
-    };
-</script>
+{{--<script>--}}
+{{--    let lang = $('html').attr('lang');--}}
+{{--    if ( $(window).width() > 768 ) {--}}
+{{--        $('a[href^="tel:"], a[href^="mailto:"]').click(function() {--}}
+{{--            event.preventDefault();--}}
+{{--            window.location.href = '/' + lang + '/contacts';--}}
+{{--        });--}}
+{{--    };--}}
+{{--</script>--}}
 
 
-{!! showSettingBodyByAlias('before-body', $lang_id) !!}
+{{--{!! showSettingBodyByAlias('before-body', $lang_id) !!}--}}
 </body>
 </html>

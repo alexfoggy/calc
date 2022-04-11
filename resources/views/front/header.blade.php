@@ -6,7 +6,7 @@
         <div class="row justify-content-between align-items-center">
             <div class="logo">
                 <a href="{{url($lang)}}">
-                    <img src="{{asset('front-assets/img/logo/logo.svg')}}" alt="">
+                    <img src="{{asset('front-assets/img/logo/logo.svg')}}" alt="CALC">
                 </a>
             </div>
             <div class="d-flex align-items-center">
@@ -14,7 +14,7 @@
                     @foreach($header_menu as $one_menu)
                         @if($one_menu->alias == 'calculator')
                             <li class="with-droppy-desktop">
-                                <a href="" class="parent-droppy">{{$one_menu->itemByLang->name ?? ''}}<svg class="ml-1">
+                                <a href="#" class="parent-droppy">{{$one_menu->itemByLang->name ?? ''}}<svg class="ml-1">
                                         <use xlink:href="{{asset('front-assets/svg/sprite.svg#arr-right')}}"></use>
                                     </svg></a>
                                 <div class="droppy-block">
