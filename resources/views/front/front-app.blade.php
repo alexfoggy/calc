@@ -74,7 +74,7 @@
 
 @yield('footer')
 
-<script src="{{asset('front-assets/js/libs.min.js?v=').env('JS_LIB_VER') }}"></script>
+<script src="{{asset('front-assets/js/libs.min.js?v=').time() }}"></script>
 <script src="{{asset('front-assets/js/main.js?v=').env('JS_VER') }}"></script>
 {{--<script src="{{asset('front-assets/js/notiflix-2.5.0.min.js')}}"></script>--}}
 {{--<script src="{{asset('front-assets/js/recaptcha.js')}}"></script>--}}
