@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGallerySubjectIdTable extends Migration
+class CreateModulesIdTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,18 @@ class CreateGallerySubjectIdTable extends Migration
      */
     public function up()
     {
-        Schema::create('gallery_subject_id', function (Blueprint $table) {
+        Schema::create('modules_id', function (Blueprint $table) {
             $table->id();
             $table->integer('p_id')->default(0);
             $table->string('alias')->nullable();
-            $table->tinyInteger('active')->default(1);
-            $table->tinyInteger('deleted')->default(0);
             $table->integer('level')->default(1);
             $table->integer('position')->default(0);
-            $table->string('img')->nullable();
-            $table->integer('oldid')->default(0);
+            $table->string('controller')->nullable();
+            $table->string('models')->nullable();
+            $table->string('view')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('deleted')->default(0);
+            $table->tinyInteger('root')->default(0);
             $table->timestamp();
         });
     }
@@ -34,6 +36,6 @@ class CreateGallerySubjectIdTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gallery_subject_id');
+        Schema::dropIfExists('modules_id');
     }
 }

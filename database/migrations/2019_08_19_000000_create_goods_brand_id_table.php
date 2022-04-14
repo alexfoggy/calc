@@ -16,10 +16,10 @@ class CreateGoodsBrandIdTable extends Migration
         Schema::create('goods_brand_id', function (Blueprint $table) {
             $table->id();
             $table->string('alias');
-            $table->string('img');
-            $table->tinyInteger('active');
-            $table->integer('position');
-            $table->tinyInteger('deleted');
+            $table->string('img')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->default(0);
+            $table->tinyInteger('deleted')->default(0);
             $table->timestamp();
         });
     }

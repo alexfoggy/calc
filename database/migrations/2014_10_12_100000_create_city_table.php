@@ -16,8 +16,8 @@ class CreateCityTable extends Migration
         Schema::create('city', function (Blueprint $table) {
             $table->id();
             $table->integer('city_id')->index();
-            $table->tinyInteger('lang_id');
-            $table->string('name');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
             $table->timestamp();
         });
     }

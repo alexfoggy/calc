@@ -16,9 +16,9 @@ class CreateBannersImagesTable extends Migration
         Schema::create('banners_images', function (Blueprint $table) {
             $table->id();
             $table->integer('banner_id')->index();
-            $table->string('img');
-            $table->tinyInteger('active');
-            $table->integer('position');
+            $table->string('img')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->default(0);
             $table->timestamps();
         });
     }

@@ -15,8 +15,8 @@ class CreateGoodsMeasureIdTable extends Migration
     {
         Schema::create('goods_measure_id', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('active');
-            $table->integer('position');
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->default(0);
             $table->timestamp();
         });
     }

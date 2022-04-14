@@ -16,15 +16,15 @@ class CreateGoodsItemTable extends Migration
         Schema::create('goods_item', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_item_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
-            $table->text('short_descr');
-            $table->longText('body');
-            $table->longText('page_title');
-            $table->longText('h1_title');
-            $table->longText('meta_title');
-            $table->longText('meta_keywords');
-            $table->longText('meta_description');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
+            $table->text('short_descr')->nullable();
+            $table->longText('body')->nullable();
+            $table->longText('page_title')->nullable();
+            $table->longText('h1_title')->nullable();
+            $table->longText('meta_title')->nullable();
+            $table->longText('meta_keywords')->nullable();
+            $table->longText('meta_description')->nullable();
             $table->timestamp();
         });
     }

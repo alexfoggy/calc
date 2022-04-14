@@ -15,10 +15,10 @@ class CreateAdminUserGroupTable extends Migration
     {
         Schema::create('admin_user_group', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('active');
-            $table->tinyInteger('deleted');
-            $table->string('name');
-            $table->string('alias');
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('deleted')->default(0);
+            $table->string('name')->nullable();
+            $table->string('alias')->nullable();
             $table->timestamps();
         });
     }

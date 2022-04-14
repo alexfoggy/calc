@@ -15,8 +15,8 @@ class CreateCompareIdTable extends Migration
     {
         Schema::create('compare_id', function (Blueprint $table) {
             $table->id();
-            $table->integer('front_user_id');
-            $table->string('user_ip');
+            $table->integer('front_user_id')->nullable();
+            $table->string('user_ip')->nullable();
             $table->timestamp();
         });
     }

@@ -16,9 +16,9 @@ class CreateGoodsItemModulesTable extends Migration
         Schema::create('goods_item_modules', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_item_modules_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
-            $table->longText('body');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
+            $table->longText('body')->nullable();
             $table->timestamp();
         });
     }

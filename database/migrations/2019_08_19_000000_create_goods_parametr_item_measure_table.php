@@ -16,8 +16,8 @@ class CreateGoodsParametrItemMeasureTable extends Migration
         Schema::create('goods_parametr_item_measure', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_parametr_item_id');
-            $table->integer('goods_measure_id');
-            $table->float('parametr_value');
+            $table->integer('goods_measure_id')->nullable();
+            $table->float('parametr_value')->nullable();
             $table->timestamp();
         });
     }

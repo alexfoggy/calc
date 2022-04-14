@@ -16,13 +16,13 @@ class CreateBasketTable extends Migration
         Schema::create('basket', function (Blueprint $table) {
             $table->id();
             $table->integer('basket_id');
-            $table->string('alias_item');
-            $table->integer('goods_item_id');
-            $table->integer('items_count');
-            $table->string('goods_name');
-            $table->float('goods_price');
-            $table->string('goods_one_c_code');
-            $table->string('goods_model');
+            $table->string('alias_item')->nullable();
+            $table->integer('goods_item_id')->nullable();
+            $table->integer('items_count')->default(1);
+            $table->string('goods_name')->nullable();
+            $table->float('goods_price')->nullable();
+            $table->string('goods_one_c_code')->nullable();
+            $table->string('goods_model')->nullable();
             $table->timestamp();
         });
     }

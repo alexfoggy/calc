@@ -16,9 +16,9 @@ class CreateGoodsImagesTable extends Migration
         Schema::create('goods_images', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_subject_id');
-            $table->string('img');
-            $table->tinyInteger('active');
-            $table->integer('position');
+            $table->string('img')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->default(0);
             $table->timestamp();
         });
     }

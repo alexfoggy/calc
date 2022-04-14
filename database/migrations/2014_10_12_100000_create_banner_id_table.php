@@ -15,10 +15,10 @@ class CreateBannerIdTable extends Migration
     {
         Schema::create('banner_id', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('active');
-            $table->tinyInteger('delete');
-            $table->string('img');
-            $table->text('link');
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('delete')->default(0);
+            $table->string('img')->nullable();
+            $table->text('link')->nullable();
             $table->timestamp();
         });
     }

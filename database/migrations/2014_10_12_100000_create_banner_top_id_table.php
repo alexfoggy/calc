@@ -15,10 +15,10 @@ class CreateBannerTopIdTable extends Migration
     {
         Schema::create('banner_top_id', function (Blueprint $table) {
             $table->id();
-            $table->integer('position');
-            $table->tinyInteger('active');
-            $table->tinyInteger('delete');
-            $table->integer('number');
+            $table->integer('position')->default(0);
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('delete')->default(0);
+            $table->integer('number')->nullable();
             $table->timestamp();
         });
     }

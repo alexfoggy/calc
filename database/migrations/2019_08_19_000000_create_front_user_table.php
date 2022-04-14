@@ -15,19 +15,19 @@ class CreateFrontUserTable extends Migration
     {
         Schema::create('front_user', function (Blueprint $table) {
             $table->id();
-            $table->string('facebook_id');
-            $table->string('google_id');
-            $table->string('first_name');
-            $table->string('userName');
-            $table->string('last_name');
-            $table->string('email');
-            $table->string('phone');
-            $table->integer('discount');
-            $table->string('password');
-            $table->string('gift_card');
-            $table->tinyInteger('active');
+            $table->string('facebook_id')->nullable();
+            $table->string('google_id')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('userName')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->integer('discount')->default(0);
+            $table->string('password')->nullable();
+            $table->string('gift_card')->nullable();
+            $table->tinyInteger('active')->default(1);
             $table->rememberToken();
-            $table->string('recovery_hash');
+            $table->string('recovery_hash')->nullable();
             $table->timestamp();
         });
     }

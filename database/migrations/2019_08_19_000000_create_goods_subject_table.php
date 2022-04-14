@@ -16,14 +16,14 @@ class CreateGoodsSubjectTable extends Migration
         Schema::create('goods_subject', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_subject_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
-            $table->text('body');
-            $table->text('page_title');
-            $table->text('h1_title');
-            $table->string('meta_title');
-            $table->text('meta_keywords');
-            $table->text('meta_description');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
+            $table->text('body')->nullable();
+            $table->text('page_title')->nullable();
+            $table->text('h1_title')->nullable();
+            $table->string('meta_title')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('meta_description')->nullable();
             $table->timestamp();
         });
     }

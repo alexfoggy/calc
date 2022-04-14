@@ -15,9 +15,9 @@ class CreateCityIdTable extends Migration
     {
         Schema::create('city_id', function (Blueprint $table) {
             $table->id();
-            $table->string('alias');
-            $table->tinyInteger('active');
-            $table->integer('position');
+            $table->string('alias')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->nullable();
             $table->timestamp();
         });
     }

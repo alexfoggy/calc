@@ -15,17 +15,17 @@ class CreateInfoItemTable extends Migration
     {
         Schema::create('info_item', function (Blueprint $table) {
             $table->id();
-            $table->integer('info_item_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
-            $table->text('descr');
-            $table->text('body');
-            $table->string('author');
-            $table->string('page_title');
-            $table->string('h1_title');
-            $table->string('meta_title');
-            $table->text('meta_keywords');
-            $table->text('meta_description');
+            $table->integer('info_item_id')->default(0);
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
+            $table->text('descr')->nullable();
+            $table->text('body')->nullable();
+            $table->string('author')->nullable();
+            $table->string('page_title')->nullable();
+            $table->string('h1_title')->nullable();
+            $table->string('meta_title')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('meta_description')->nullable();
             $table->timestamp();
         });
     }

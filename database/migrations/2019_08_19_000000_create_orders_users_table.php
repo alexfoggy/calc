@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFeedformTable extends Migration
+class CreateOrdersUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,21 @@ class CreateFeedformTable extends Migration
      */
     public function up()
     {
-        Schema::create('feedform', function (Blueprint $table) {
+        Schema::create('orders_users', function (Blueprint $table) {
             $table->id();
+            $table->integer('orders_id');
+            $table->string('user_ip')->nullable();
             $table->string('name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('subject')->nullable();
-            $table->text('comment')->nullable();
-            $table->string('ip')->nullable();
-            $table->tinyInteger('active')->default(1);
-            $table->tinyInteger('seen')->default(0);
+            $table->string('address')->nullable();
+            $table->string('apartment')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->string('city_area')->nullable();
+            $table->string('zip_code')->nullable();
+            $table->text('descr')->nullable();
             $table->timestamp();
         });
     }
@@ -35,6 +39,6 @@ class CreateFeedformTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feedform');
+        Schema::dropIfExists('orders_users');
     }
 }

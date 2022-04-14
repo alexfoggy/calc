@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsParametrItemSimpleTable extends Migration
+class CreateModulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateGoodsParametrItemSimpleTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_parametr_item_id', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->id();
-            $table->integer('goods_measure_id');
+            $table->integer('modules_id');
             $table->tinyInteger('lang_id')->nullable();
-            $table->text('parametr_value')->nullable();
+            $table->string('name')->nullable();
+            $table->text('body')->nullable();
             $table->timestamp();
         });
     }
@@ -29,6 +30,6 @@ class CreateGoodsParametrItemSimpleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_parametr_item_simple');
+        Schema::dropIfExists('modules');
     }
 }

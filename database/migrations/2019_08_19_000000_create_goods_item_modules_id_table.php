@@ -16,7 +16,7 @@ class CreateGoodsItemModulesIdTable extends Migration
         Schema::create('goods_item_modules_id', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_item_id');
-            $table->integer('position');
+            $table->integer('position')->default(0);
             $table->timestamp();
         });
     }

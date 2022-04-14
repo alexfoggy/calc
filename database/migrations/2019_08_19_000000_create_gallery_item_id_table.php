@@ -16,16 +16,16 @@ class CreateGalleryItemIdTable extends Migration
         Schema::create('gallery_item_id', function (Blueprint $table) {
             $table->id();
             $table->integer('gallery_subject_id');
-            $table->string('alias');
-            $table->tinyInteger('active');
-            $table->tinyInteger('deleted');
-            $table->integer('position');
-            $table->tinyInteger('show_on_main');
-            $table->string('img');
-            $table->string('youtube_id');
-            $table->string('youtube_link');
-            $table->enum('type',['video','photo']);
-            $table->integer('oldid');
+            $table->string('alias')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('deleted')->default(0);
+            $table->integer('position')->default(0);
+            $table->tinyInteger('show_on_main')->default(0);
+            $table->string('img')->nullable();
+            $table->string('youtube_id')->nullable();
+            $table->string('youtube_link')->nullable();
+            $table->enum('type',['video','photo'])->default('photo');
+            $table->integer('oldid')->default(0);
             $table->timestamp();
         });
     }

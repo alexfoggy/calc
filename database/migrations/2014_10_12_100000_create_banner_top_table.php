@@ -16,11 +16,11 @@ class CreateBannerTopTable extends Migration
         Schema::create('banner_top', function (Blueprint $table) {
             $table->id();
             $table->integer('banner_top_id')->index();
-            $table->tinyInteger('lang_id');
-            $table->string('img');
-            $table->string('name');
-            $table->text('body');
-            $table->text('link');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('img')->nullable();
+            $table->string('name')->nullable();
+            $table->text('body')->nullable();
+            $table->text('link')->nullable();
             $table->timestamp();
         });
     }

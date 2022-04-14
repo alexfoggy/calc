@@ -16,8 +16,8 @@ class CreateGoodsColorsTable extends Migration
         Schema::create('goods_colors', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_colors_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
             $table->timestamp();
         });
     }

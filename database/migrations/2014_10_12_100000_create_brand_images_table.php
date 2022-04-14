@@ -16,9 +16,9 @@ class CreateBrandImagesTable extends Migration
         Schema::create('brand_images', function (Blueprint $table) {
             $table->id();
             $table->integer('brand_id')->index();
-            $table->string('img');
-            $table->tinyInteger('active');
-            $table->integer('position');
+            $table->string('img')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->integer('position')->nullable();
             $table->timestamp();
         });
     }

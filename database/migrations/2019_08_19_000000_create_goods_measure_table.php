@@ -16,8 +16,8 @@ class CreateGoodsMeasureTable extends Migration
         Schema::create('goods_measure', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_measure_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
             $table->timestamp();
         });
     }

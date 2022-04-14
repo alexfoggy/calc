@@ -16,9 +16,9 @@ class CreateGoodsParametrTable extends Migration
         Schema::create('goods_parametr', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_parametr_id');
-            $table->tinyInteger('lang_id');
-            $table->string('name');
-            $table->text('body');
+            $table->tinyInteger('lang_id')->nullable();
+            $table->string('name')->nullable();
+            $table->text('body')->nullable();
             $table->timestamp();
         });
     }
