@@ -19,7 +19,7 @@ class CreateInfoLineIdTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->tinyInteger('deleted')->default(0);
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

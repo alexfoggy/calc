@@ -19,7 +19,7 @@ class CreateGoodsItemModulesTable extends Migration
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
             $table->longText('body')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

@@ -23,7 +23,7 @@ class CreateBasketTable extends Migration
             $table->float('goods_price')->nullable();
             $table->string('goods_one_c_code')->nullable();
             $table->string('goods_model')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

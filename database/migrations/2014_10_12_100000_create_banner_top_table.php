@@ -21,7 +21,7 @@ class CreateBannerTopTable extends Migration
             $table->string('name')->nullable();
             $table->text('body')->nullable();
             $table->text('link')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

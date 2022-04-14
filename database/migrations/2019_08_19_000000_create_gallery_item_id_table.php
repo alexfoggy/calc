@@ -26,7 +26,7 @@ class CreateGalleryItemIdTable extends Migration
             $table->string('youtube_link')->nullable();
             $table->enum('type',['video','photo'])->default('photo');
             $table->integer('oldid')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

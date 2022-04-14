@@ -24,7 +24,7 @@ class CreateFeedformTable extends Migration
             $table->string('ip')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->tinyInteger('seen')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

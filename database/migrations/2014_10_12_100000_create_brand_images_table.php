@@ -19,7 +19,7 @@ class CreateBrandImagesTable extends Migration
             $table->string('img')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->integer('position')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

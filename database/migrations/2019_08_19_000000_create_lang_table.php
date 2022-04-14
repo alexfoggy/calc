@@ -20,7 +20,7 @@ class CreateLangTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->text('descr')->nullable();
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

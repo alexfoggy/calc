@@ -18,7 +18,7 @@ class CreatePromotionsTable extends Migration
             $table->integer('promotions_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

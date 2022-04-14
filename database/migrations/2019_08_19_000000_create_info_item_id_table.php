@@ -25,7 +25,7 @@ class CreateInfoItemIdTable extends Migration
             $table->string('img')->nullable();
             $table->tinyInteger('show_img')->default(1);
             $table->integer('oldid')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

@@ -17,7 +17,7 @@ class CreateGoodsColorsIdTable extends Migration
             $table->id();
             $table->tinyInteger('p_id')->default(0);
             $table->string('img')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

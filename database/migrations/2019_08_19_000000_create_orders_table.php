@@ -28,7 +28,7 @@ class CreateOrdersTable extends Migration
             $table->string('discount')->nullable();
             $table->tinyInteger('seen')->default(0);
             $table->tinyInteger('was_sent')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

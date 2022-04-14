@@ -24,7 +24,7 @@ class CreateGallerySubjectTable extends Migration
             $table->string('meta_title')->nullable();;
             $table->string('meta_keywords')->nullable();;
             $table->string('meta_description')->nullable();;
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

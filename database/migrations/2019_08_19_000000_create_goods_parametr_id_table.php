@@ -16,7 +16,7 @@ class CreateGoodsParametrIdTable extends Migration
         Schema::create('goods_parametr_id', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_subject_id');
-            $table->enum('measure_type',['no_measure','with_measure','measure_list'])->default('nu_measure');
+            $table->enum('measure_type',['no_measure','with_measure','measure_list'])->default('no_measure');
             $table->integer('goods_measure_id')->nullable();
             $table->string('alias')->nullable();
             $table->enum('parametr_type',['input','textarea','select','radio','checkbox'])->default('input');
@@ -28,7 +28,7 @@ class CreateGoodsParametrIdTable extends Migration
             $table->tinyInteger('start_open')->default(0);
             $table->tinyInteger('display_in_line')->default(0);
             $table->tinyInteger('display_on_list_page')->default(1);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

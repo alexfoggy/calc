@@ -24,7 +24,7 @@ class CreateGoodsSubjectTable extends Migration
             $table->string('meta_title')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

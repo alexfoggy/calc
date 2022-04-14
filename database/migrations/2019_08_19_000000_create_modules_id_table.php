@@ -25,7 +25,7 @@ class CreateModulesIdTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->tinyInteger('deleted')->default(0);
             $table->tinyInteger('root')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

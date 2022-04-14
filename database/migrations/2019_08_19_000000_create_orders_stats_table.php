@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderStatsTable extends Migration
+class CreateOrdersStatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,7 @@ class CreateOrderStatsTable extends Migration
             $table->id();
             $table->integer('orders_id');
             $table->string('type')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

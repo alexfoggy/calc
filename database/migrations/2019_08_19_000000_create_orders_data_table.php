@@ -24,11 +24,11 @@ class CreateOrdersDataTable extends Migration
             $table->string('gift_card_code')->nullable();
             $table->float('gift_card_sum')->nullable();
             $table->string('maib_trans_id')->nullable();
-            $table->enum('maib_status',['unassigned','gone','paid','notpaid','failed'])->default('unassugned');
+            $table->enum('maib_status',['unassigned','gone','paid','notpaid','failed'])->default('unassigned');
             $table->tinyInteger('lang_id')->nullable();
             $table->tinyInteger('email_sent')->default(0);
             $table->tinyInteger('money_were_returned')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

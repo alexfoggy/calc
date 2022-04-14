@@ -17,7 +17,7 @@ class CreateGoodsParametrItemIdTable extends Migration
             $table->id();
             $table->integer('goods_item_id');
             $table->integer('goods_parametr_id');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

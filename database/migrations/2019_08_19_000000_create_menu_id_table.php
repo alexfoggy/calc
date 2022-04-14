@@ -26,7 +26,7 @@ class CreateMenuIdTable extends Migration
             $table->tinyInteger('top_menu')->default(1);
             $table->tinyInteger('footer_menu')->default(1);
             $table->tinyInteger('bot_footer_menu')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

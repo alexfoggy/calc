@@ -17,7 +17,7 @@ class CreateGoodsMeasureIdTable extends Migration
             $table->id();
             $table->tinyInteger('active')->default(1);
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

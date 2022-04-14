@@ -21,7 +21,7 @@ class CreatePromotionsIdTable extends Migration
             $table->string('img')->nullable();
             $table->integer('position')->nullable();
 
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

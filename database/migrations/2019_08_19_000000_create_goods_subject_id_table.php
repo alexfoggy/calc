@@ -28,7 +28,7 @@ class CreateGoodsSubjectIdTable extends Migration
             $table->integer('oldid')->default(0);
             $table->tinyInteger('top_category')->default(0);
             $table->string('svg_name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

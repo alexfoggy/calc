@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsMeasureTable extends Migration
+class CreateShopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,16 @@ class CreateGoodsMeasureTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_measure', function (Blueprint $table) {
+        Schema::create('shops', function (Blueprint $table) {
             $table->id();
-            $table->integer('goods_measure_id');
+            $table->integer('shops_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
+            $table->string('type')->nullable();
+            $table->string('distr')->nullable();
+            $table->string('cafe')->nullable();
+            $table->string('address')->nullable();
+            $table->string('schedule')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +34,6 @@ class CreateGoodsMeasureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_measure');
+        Schema::dropIfExists('shops');
     }
 }

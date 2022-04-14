@@ -23,7 +23,7 @@ class CreateGallerySubjectIdTable extends Migration
             $table->integer('position')->default(0);
             $table->string('img')->nullable();
             $table->integer('oldid')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

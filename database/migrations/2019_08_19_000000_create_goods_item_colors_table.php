@@ -18,7 +18,7 @@ class CreateGoodsItemColorsTable extends Migration
             $table->integer('goods_item_id');
             $table->integer('goods_colors_id');
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

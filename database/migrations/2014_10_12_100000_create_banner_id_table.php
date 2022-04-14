@@ -19,7 +19,7 @@ class CreateBannerIdTable extends Migration
             $table->tinyInteger('delete')->default(0);
             $table->string('img')->nullable();
             $table->text('link')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

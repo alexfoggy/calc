@@ -19,7 +19,7 @@ class CreateCompareTable extends Migration
             $table->integer('goods_subject_id')->index();
             $table->integer('goods_item_id')->index();
             $table->integer('position')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

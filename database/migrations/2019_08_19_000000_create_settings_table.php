@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsBrandTable extends Migration
+class CreateSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateGoodsBrandTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_brand', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->integer('goods_brand_id');
-            $table->tinyInteger('lang_id');
+            $table->integer('settings_id');
+            $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->text('link')->nullable();
             $table->text('body')->nullable();
-            $table->text('meta_title')->nullable();
-            $table->text('meta_keywords')->nullable();
-            $table->text('meta_description')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ class CreateGoodsBrandTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_brand');
+        Schema::dropIfExists('settings');
     }
 }

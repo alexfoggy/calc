@@ -19,7 +19,7 @@ class CreateGoodsParametrTable extends Migration
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
             $table->text('body')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

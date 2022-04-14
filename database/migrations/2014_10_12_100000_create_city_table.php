@@ -18,7 +18,7 @@ class CreateCityTable extends Migration
             $table->integer('city_id')->index();
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

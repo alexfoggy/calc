@@ -19,7 +19,7 @@ class CreateBannerTopIdTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->tinyInteger('delete')->default(0);
             $table->integer('number')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

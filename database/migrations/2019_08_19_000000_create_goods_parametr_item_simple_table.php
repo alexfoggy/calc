@@ -13,12 +13,12 @@ class CreateGoodsParametrItemSimpleTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_parametr_item_id', function (Blueprint $table) {
+        Schema::create('goods_parametr_item_simple', function (Blueprint $table) {
             $table->id();
             $table->integer('goods_measure_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->text('parametr_value')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

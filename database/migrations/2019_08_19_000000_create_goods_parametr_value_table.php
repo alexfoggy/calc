@@ -18,7 +18,7 @@ class CreateGoodsParametrValueTable extends Migration
             $table->integer('goods_parametr_value_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

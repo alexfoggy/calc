@@ -16,7 +16,7 @@ class CreateBasketIdTable extends Migration
         Schema::create('basket_id', function (Blueprint $table) {
             $table->id();
             $table->string('user_id')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

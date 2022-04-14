@@ -18,7 +18,7 @@ class CreateGoodsMeasureListTable extends Migration
             $table->integer('goods_parametr_id');
             $table->integer('goods_measure_id');
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

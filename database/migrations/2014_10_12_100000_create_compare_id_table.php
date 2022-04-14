@@ -17,7 +17,7 @@ class CreateCompareIdTable extends Migration
             $table->id();
             $table->integer('front_user_id')->nullable();
             $table->string('user_ip')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

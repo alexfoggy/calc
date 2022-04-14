@@ -17,7 +17,7 @@ class CreateGoodsParametrItemRscTable extends Migration
             $table->id();
             $table->integer('goods_parametr_item_id');
             $table->integer('goods_parametr_value_id');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

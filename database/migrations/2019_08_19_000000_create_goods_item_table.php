@@ -25,7 +25,7 @@ class CreateGoodsItemTable extends Migration
             $table->longText('meta_title')->nullable();
             $table->longText('meta_keywords')->nullable();
             $table->longText('meta_description')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

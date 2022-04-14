@@ -18,7 +18,7 @@ class CreateLabelsTable extends Migration
             $table->integer('labels_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

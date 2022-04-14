@@ -18,7 +18,7 @@ class CreateCityIdTable extends Migration
             $table->string('alias')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->integer('position')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

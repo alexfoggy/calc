@@ -18,7 +18,7 @@ class CreateGoodsParametrItemMeasureTable extends Migration
             $table->integer('goods_parametr_item_id');
             $table->integer('goods_measure_id')->nullable();
             $table->float('parametr_value')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

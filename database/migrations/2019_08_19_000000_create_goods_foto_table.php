@@ -22,7 +22,7 @@ class CreateGoodsFotoTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->date('add_date')->nullable();
             $table->integer('oldid')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

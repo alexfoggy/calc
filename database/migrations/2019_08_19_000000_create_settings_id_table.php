@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsParametrValueIdTable extends Migration
+class CreateSettingsIdTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateGoodsParametrValueIdTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_parametr_value_id', function (Blueprint $table) {
+        Schema::create('settings_id', function (Blueprint $table) {
             $table->id();
-            $table->integer('goods_parametr_id');
-            $table->integer('position')->default(0);
-            $table->tinyInteger('active')->default(1);
+            $table->string('alias')->nullable();
+            $table->enum('set_type',['input','textarea','ckeditor'])->default('input');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateGoodsParametrValueIdTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_parametr_value_id');
+        Schema::dropIfExists('settings_id');
     }
 }

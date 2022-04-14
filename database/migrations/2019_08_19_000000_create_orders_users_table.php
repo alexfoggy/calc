@@ -28,7 +28,7 @@ class CreateOrdersUsersTable extends Migration
             $table->string('city_area')->nullable();
             $table->string('zip_code')->nullable();
             $table->text('descr')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

@@ -18,7 +18,7 @@ class CreateGoodsColorsTable extends Migration
             $table->integer('goods_colors_id');
             $table->tinyInteger('lang_id')->nullable();
             $table->string('name')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

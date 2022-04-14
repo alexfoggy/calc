@@ -16,7 +16,7 @@ class CreateLabelsIdTable extends Migration
         Schema::create('labels_id', function (Blueprint $table) {
             $table->id();
             $table->string('alias')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

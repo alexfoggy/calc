@@ -19,7 +19,7 @@ class CreateGoodsImagesTable extends Migration
             $table->string('img')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->integer('position')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

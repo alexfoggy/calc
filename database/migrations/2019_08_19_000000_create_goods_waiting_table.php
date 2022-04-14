@@ -18,9 +18,9 @@ class CreateGoodsWaitingTable extends Migration
             $table->integer('goods_item_id');
             $table->integer('front_user_id')->default(0);
             $table->string('email')->nullable();
-            $table->date('date')->default(0);
+            $table->string('date')->default(0);
             $table->tinyInteger('message_sent')->default(0);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

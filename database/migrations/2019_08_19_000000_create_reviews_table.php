@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsParametrValueIdTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateGoodsParametrValueIdTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_parametr_value_id', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->integer('goods_parametr_id');
-            $table->integer('position')->default(0);
-            $table->tinyInteger('active')->default(1);
+            $table->integer('front_user_id')->nullable();
+            $table->integer('goods_id')->nullable();
+            $table->text('body')->nullable();
+            $table->tinyInteger('rating')->default(5);
+            $table->tinyInteger('active')->default(0);
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateGoodsParametrValueIdTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_parametr_value_id');
+        Schema::dropIfExists('reviews');
     }
 }

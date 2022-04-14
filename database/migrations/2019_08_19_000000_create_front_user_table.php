@@ -28,7 +28,7 @@ class CreateFrontUserTable extends Migration
             $table->tinyInteger('active')->default(1);
             $table->rememberToken();
             $table->string('recovery_hash')->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

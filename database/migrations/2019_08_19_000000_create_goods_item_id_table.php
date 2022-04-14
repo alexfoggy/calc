@@ -34,7 +34,7 @@ class CreateGoodsItemIdTable extends Migration
             $table->tinyInteger('popular_element')->default(0);
             $table->string('tech')->nullable();
 
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
