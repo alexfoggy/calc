@@ -191,7 +191,13 @@
     <script>
 
         async function fetchText() {
-            let response = await fetch('https://calc.md/api/getmain');
+            let response = await fetch('https://calc.md/api/getmain',
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                });
             let data = await response.json();
             console.log(data);
             let block = '';
