@@ -14,7 +14,7 @@
         </div>
         <div class="container calcs">
             <div class="row justify-content-between" id="gridUp">
-                @if($calc_categorys)
+               {{-- @if($calc_categorys)
                     @foreach($calc_categorys as $one_subject)
                         <div class="grid-item">
                             <div class="calc-category">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     @endforeach
-                @endif
+                @endif--}}
             </div>
         </div>
        {{-- <div class="container main-archiv">
@@ -188,7 +188,7 @@
 @stop
 
 @push('scripts')
-    {{--<script>
+    <script>
 
         async function fetchText() {
             let response = await fetch('https://www.calc.md/api/getmain',
@@ -239,7 +239,7 @@
 
         }
         fetchText();
-    </script>--}}
+    </script>
 @endpush
 
 @include('front.footer')
