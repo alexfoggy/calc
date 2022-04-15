@@ -13,8 +13,8 @@
             <h2>{{ShowLabelById(194,$lang_id)}}</h2>
         </div>
         <div class="container calcs">
-            <div class="row isotopegrid">
-                @if($calc_categorys)
+            <div class="row justify-content-between" id="gridUp">
+               {{-- @if($calc_categorys)
                     @foreach($calc_categorys as $one_subject)
                         <div class="grid-item">
                             <div class="calc-category">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     @endforeach
-                @endif
+                @endif--}}
             </div>
         </div>
        {{-- <div class="container main-archiv">
@@ -186,5 +186,54 @@
 
 
 @stop
+
+@push('scripts')
+    <script>
+
+        async function fetchText() {
+            let response = await fetch('https://calc.md/api/getmain');
+            let data = await response.json();
+            console.log(data);
+            let block = '';
+            let inUrl = '';
+            let checknum = -1;
+            for(let i = 0;i < data.length;i++){
+                for(let j = 0;j < data[i].children.length; j++) {
+                    if(checknum == data[i].id){
+
+                    }
+                    else {
+                        inUrl = '';
+                    }
+                    checknum = data[i].id;
+                    inUrl += '<h4><a href="ru/calculator/'+data[i].alias+'/'+data[i].children[j].alias+'">'+data[i].children[j].item_by_lang.name+'</a></h4>'
+
+                }
+
+                block += '<div class="grid-item mx-2">'+
+                    '<div class="calc-category">'+
+                    '<h3>'+
+                    '<a href="/ru/'+data[i].alias+'">'+
+                    data[i].item_by_lang.name+
+                    '</a>'+
+                    '</h3>'+
+                    '<div class="d-flex flex-wrap">'+inUrl+
+                    ' </div>'+
+                ' <div class="icon-background">'+
+                '<svg>'+
+                ' <use xlink:href="/front-assets/svg/sprite.svg#math'+i+'"></use>'+
+                '</svg>'+
+                ' </div>'+
+                '</div>'+
+                '</div>';
+            }
+
+
+            $('#gridUp').append(block);
+
+        }
+        fetchText();
+    </script>
+@endpush
 
 @include('front.footer')

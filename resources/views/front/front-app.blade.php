@@ -80,6 +80,7 @@
 {{--<script src="{{asset('front-assets/js/notiflix-2.5.0.min.js')}}"></script>--}}
 {{--<script src="{{asset('front-assets/js/recaptcha.js')}}"></script>--}}
 <script src="{{asset('front-assets/js/ajax-scripts.js')}}"></script>
+<script src="{{asset('front-assets/js/send.js')}}"></script>
 {{--<script src="https://www.google.com/recaptcha/api.js?render={{ env('RE_CAP_SITE') }}"></script>--}}
 
 {{--<script>--}}
@@ -101,5 +102,6 @@
 
 
 {{--{!! showSettingBodyByAlias('before-body', $lang_id) !!}--}}
+@stack('scripts')
 </body>
 </html>

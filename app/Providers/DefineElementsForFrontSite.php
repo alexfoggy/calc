@@ -30,8 +30,8 @@ class DefineElementsForFrontSite extends ServiceProvider
     public function boot()
     {
         $controller = new Controller();
-//        $this->lang_id = $controller->lang()['lang_id'];
-//        $this->lang = $controller->lang()['lang'];
+        $this->lang_id = $controller->lang()['lang_id'];
+        $this->lang = $controller->lang()['lang'];
         /*Header*/
         View::composer(['front.header'], function($view) {
 

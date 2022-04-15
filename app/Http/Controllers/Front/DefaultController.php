@@ -36,28 +36,21 @@ class DefaultController extends Controller
 //        if (request()->ip() == '178.168.61.197' || request()->ip() == '188.138.182.163') {
 
 
-            $calc_categorys = CalcSubjectId::where('active', 1)->where('deleted', 0)->with('itemByLang')
-                ->with(['children' => function ($q) {
-                    $q->where('active', 1)
-                        ->where('deleted', 0)
-                        ->has('itemByLang')
-                        ->with('itemByLang')
-                        ->orderBy('created_at', 'asc');
-                }])->get();
 
-            $arch = GoodsSubjectId::where('p_id', 0)
-                ->where('deleted', 0)
-                ->where('active', 1)
-                ->has('itemByLang')
-                ->with('itemByLang')
-                ->orderBy('position', 'asc')
-                ->with(['children' => function ($q) {
-                    $q->where('active', 1)
-                        ->where('deleted', 0)
-                        ->has('itemByLang')
-                        ->with('itemByLang')
-                        ->orderBy('position', 'asc');
-                }])->get();
+
+//            $arch = GoodsSubjectId::where('p_id', 0)
+//                ->where('deleted', 0)
+//                ->where('active', 1)
+//                ->has('itemByLang')
+//                ->with('itemByLang')
+//                ->orderBy('position', 'asc')
+//                ->with(['children' => function ($q) {
+//                    $q->where('active', 1)
+//                        ->where('deleted', 0)
+//                        ->has('itemByLang')
+//                        ->with('itemByLang')
+//                        ->orderBy('position', 'asc');
+//                }])->get();
 
       /*  } else {
             $view = 'front.index-test';
@@ -68,6 +61,21 @@ class DefaultController extends Controller
 
         return view($view, get_defined_vars());
     }
+
+    public function apiMain(){
+
+        $calc_categorys = CalcSubjectId::where('active', 1)->where('deleted', 0)->with('itemByLang')
+            ->with(['children' => function ($q) {
+                $q->where('active', 1)
+                    ->where('deleted', 0)
+                    ->has('itemByLang')
+                    ->with('itemByLang')
+                    ->orderBy('created_at', 'asc');
+            }])->get();
+
+        return response()->json($calc_categorys);
+    }
+
 
     public function menuElements($lang, $parent, $children = null)
     {
