@@ -2,7 +2,8 @@
 <html lang="{{$lang}}">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script data-ad-client="ca-pub-6912825580400313" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6912825580400313"
+     crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ5XCKTQEB"></script>
 
     <script type="application/ld+json">

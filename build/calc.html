@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Title</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Main Header start -->  
+  <header class="main-header">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="logo">
+          <a href="">
+            <img src="img/logo/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="d-flex align-items-center">
+          <ul class="menu mob-no">
+            <li class="position-relative">
+              <a href="">Избранные</a>
+              <span class="status-info-header">+2</span>
+            </li>
+            <li class="with-droppy-desktop">
+              <a href="" class="parent-droppy">Калькуляторы <svg>
+                <use xlink:href="/svg/sprite.svg#arr-right"></use>
+            </svg></a>
+              <div class="droppy-block">
+                <ul>
+                  <li>
+                    <a href="">Налоговые</a>
+                  </li>
+                  <li>
+                    <a href="">Математические</a>
+                  </li>
+                  <li>
+                    <a href="">Автомобильные</a>
+                  </li>
+                  <li>
+                    <a href="">Естественные</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">На связи</a>
+            </li>
+            <li>
+              <a href="">Как работает ?</a>
+            </li>
+          </ul>
+          <div class="in-block">
+            <div class="icon-openner">
+              <svg>
+                <use xlink:href="/svg/sprite.svg#inacc"></use>
+            </svg>
+            </div>
+            <div class="drop-it">
+            <p>Войти с помощью</p>
+            <div class="social-in">
+              <div class="facebook"><img src="img/icons/fb.svg" alt=""></div>
+              <div class="google"><img src="img/icons/google.svg" alt=""></div>
+          </div>
+        </div>
+          </div>
+          <div class="search-button mob-no">
+            <svg>
+              <use xlink:href="/svg/sprite.svg#search"></use>
+          </svg>
+          </div>
+          <div class="langs mob-no">
+            <span>ru</span>
+            <div class="lang-drop">
+              <a href="">ro</a>
+              <a href="">en</a>
+            </div>
+          </div>
+          <div class="mob-go">
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+  </header>
+
+  <div class="you-used">
+    <h3>История посищений</h3>
+    <ul class="history">
+      <li>
+        <a href="">Калькулятор веса</a>
+      </li>
+      <li>
+        <a href="">Подсчет НДС</a>
+      </li>
+      <li>
+        <a href="">Калькулятор веса</a>
+      </li>
+      <li>
+        <a href="">Подсчет НДС</a>
+      </li>
+      <li>
+        <a href="">Калькулятор веса</a>
+      </li>
+      <li>
+        <a href="">Подсчет НДС</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="search-popup">
+    <div class="plenka"></div>
+    <div class="search-form">
+      <form action="">
+        <input type="text" placeholder="Поиск...">
+        <button>
+          <svg>
+            <use xlink:href="/svg/sprite.svg#search"></use>
+        </svg>
+        </button>
+        <div class="smart-search">
+          <div class="loading-search">
+            <div class="lds-facebook"><div></div><div></div><div></div></div>
+          </div>
+          <!-- <div class="search-result">
+            <div class="row">
+              <div class="col-lg-6">
+            <h3>
+              <a href="">
+                Калькуляторы Налогов
+              </a>
+            </h3>
+            <div class="d-flex flex-wrap">
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+          </div>
+            <h3>
+              <a href="">
+                Калькуляторы Налогов
+              </a>
+            </h3>
+            <div class="d-flex flex-wrap">
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+          </div>
+        </div>
+        <div class="col-lg-6 search-archive">
+          <h3><a href=""> Справочник </a></h3>
+          <div class="d-flex flex-wrap">
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+            <h4>
+              <a href="">
+                Подсчет НДС
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="langs-block">
+      <span>
+        Мы так же дотупны на:
+      </span>
+      
+      <div class="langs-line">
+        <a href="">RO</a>
+        <a href="">EN</a>
+      </div>
+    </div>
+    <div class="social-in">
+    <div class="log-in">Вход</div>
+    <div class="reg-in">Регистрация</div>
+    </div>
+    <div class="d-flex justify-content-center">
+    <div class="search-oppener-mobile button-open" data-open='search-popup'>
+      <svg>
+            <use xlink:href="/svg/sprite.svg#search"></use>
+        </svg>
+        <span>Поиск</span>
+        
+        <svg>
+          <use xlink:href="/svg/sprite.svg#search"></use>
+      </svg>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="">Избранные</a>
+      </li>
+      <li class="with-drop">
+        <a href="javascript:;" class="droppy-action">Калькуляторы</a>
+        <ul class="droppy">
+          <li>
+            <a href="">Налоговые </a>
+          </li>
+          <li>
+            <a href="">Автомобильные </a>
+          </li>
+          <li>
+            <a href="">Физические </a>
+          </li>
+          <li>
+            <a href="">Простые </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="">На связи</a>
+      </li>
+      <li>
+        <a href="">Как работает ?</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Main Header end -->
+
+<section class="calculator-page">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="">Главная</a>
+            <span> <svg>
+                <use xlink:href="/svg/sprite.svg#arr-right"></use>
+            </svg></span>
+            <a href="">Налоговые калькуляторы</a>
+            <span> <svg>
+                <use xlink:href="/svg/sprite.svg#arr-right"></use>
+            </svg></span>
+            <a href="" class="active">Подсчет НДС</a>
+        </div>
+        <div class="d-flex align-items-center mobile-column justify-content-between">
+        <h1>Подсчет НДС</h1>
+        <div class="add-to-fav has-help">
+            <svg>
+                <use xlink:href="/svg/sprite.svg#saved"></use>
+            </svg>
+            <span>
+            В избранное 
+        </span>
+        <div class="help-message first-message">
+            Добавить в избранные
+        </div>
+        <div class="help-message second-message">
+            Убрать из избранных
+        </div>
+        </div>
+        </div>
+        <h2>С нами быстро и легко</h2>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia, delectus voluptates molestiae provident ullam doloribus tempore libero eius cumque repudiandae sint tempora placeat rem nobis eum exercitationem dignissimos quod!</div>
+        <div class="row ">
+            <div class="col-lg-8">
+                <div class="calc-block">
+                    <div class="anchor"></div>
+                    <div class="mt-5">
+                        <!-- <div class="result">
+                            <h3>Результат</h3>
+                            <h4>Вам необходимо купить <span>451</span> акций</h4>
+                        </div> -->
+                    <form action="">
+                        <div class="reqie">
+                            *все поля являются обязятальными
+                        </div>
+                        <span class="calc-back">
+                            Calc.md
+                        </span>
+                        <div class="row flex-column">
+                    <div class="d-flex  col-lg-12 align-items-center mt-4">
+                        <div class="title-input">
+                            Переменная А
+                        </div>
+                        <div class="input-value">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="d-flex  col-lg-12 align-items-center mt-4">
+                        <div class="title-input">
+                            Переменная Б
+                        </div>
+                        <div class="input-value ">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="d-flex  col-lg-12 align-items-center mt-4">
+                        <div class="title-input">
+                            Переменная С
+                        </div>
+                        <div class="input-value">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+
+                    <div class="checkbox-row">
+                        <label>
+                            <input type="checkbox" name='history-allow'>
+                            <div class="checkbox"></div>
+                            <span>сохранять историю подсчетов</span>
+                        </label>
+                    </div>
+                    <div class="checkbox-row">
+                        <label>
+                            <input type="checkbox" name='history-allow'>
+                            <div class="checkbox"></div>
+                            <span>сохранять историю подсчетов</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                    <div class="d-flex justify-content-center mt-3">
+                    <button>Подсчитать</button>
+                    </div>
+                </form>
+                
+            </div>
+                
+                </div>
+                <div class="w-100">
+                    <div class="result">
+                        <div class="result-row">
+                            <span class="prev-text">
+                                <b>
+                                Результат asdas dasd asd agjhk:
+                            </b>
+                            </span>
+                            <span class="final-result"><span class="bold">200 2231 123 1230</span> EUR</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="prev-text">
+                                <b>
+                                Результат:
+                            </b>
+                            </span>
+                            <span class="final-result"><span class="bold">2000</span> EUR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 pt-5">
+                <div class="share">
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#share"></use>
+                    </svg>
+                </a>
+                <div class="social-links">
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#vk"></use>
+                    </svg>
+                </a>
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                </a>
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                    <a href="">
+                    <svg>
+                        <use xlink:href="/svg/sprite.svg#telegram"></use>
+                    </svg>
+                </a>
+            </div>
+                </div>
+            </div>
+           
+        </div>
+       
+        <div class="info-alert">
+            <svg>
+                <use xlink:href="/svg/sprite.svg#hmm"></use>
+            </svg>
+            <div class="info-error">
+                Кажется данный калькулятор еще в разработке, скоро он будет доступен
+            </div>
+        </div>
+        <div class="info-alert fixed-center">
+            <svg>
+                <use xlink:href="/svg/sprite.svg#cloud"></use>
+            </svg>
+            <div class="info-error">
+                Кажется данный калькулятор еще в разработке, скоро он будет доступен
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5 pt-3 mb-5 pb-5">
+        <div class="ttl h2">
+            Вам могут быть интересны
+        </div>
+        <div class="row">
+            <a href='#' class="calc-interested">
+                <h3>Какой то полезные еще</h3>
+            </a>
+            <a href='#' class="calc-interested">
+                <h3>Супер полезный</h3>
+            </a>
+            <a href='#' class="calc-interested">
+                <h3>Простой и удобный</h3>
+            </a>
+            <a href='#' class="calc-interested">
+                <h3>Сладкий и сочный</h3>
+            </a>
+        </div>
+        </div>
+      
+</section>
+
+
+  <!-- Main Footer start -->  
+  <div class="container">
+    <div class="if-error">
+    <div class="our-team">calc.md team</div>
+    <span class="hash">#calc.md</span>
+    <h4>Если вы обнаружили ошибку, то напишите нам.
+        <br>
+        Мы стараемся для вас</h4>
+    <div class="contact-button-open button-open" data-open='error-popup'>
+        Нашел ошибку !
+    </div>
+</div>
+</div>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <a href="" class="logo">
+            <img src="img/logo/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <h4>Самые популярные</h4>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+        </div>
+        <div class="col-lg-2">
+          <h4>Новые</h4>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+        </div>
+        <div class="col-lg-3">
+          <h4>Полезное вам</h4>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+          <h5>
+            <a href="">Подсчет НДС</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <p>Copyright 2021</p>
+        <a href="" class="created-by">
+          project by ejov
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Main Footer end -->
+
+
+  <div class="popup error-popup">
+    <div class="plenka"></div>
+    <div class="error-block block-popup">
+      <div class="back-image">
+        <svg>
+          <use xlink:href="/svg/sprite.svg#eye"></use>
+      </svg>
+      </div>
+      <form action="">
+        <div class="">
+        <p>Email (по желанию)</p>
+          <input type="text">
+      </div>
+        <div class="">
+        <p>Опишите ошибку или отравте скриншот проблемы нам на почту</p>
+          <textarea name="" id=""></textarea>
+      </div>
+      <div class="">
+        <button class="button-classic">
+          Отправить
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div id="fixed-overlay"></div>
+
+	<script src="js/libs.min.js"></script> 
+  <script src="js/main.js"></script>
+
+  <script>
+    if ( $(window).width() >= 768 ) {
+      $('a[href^="tel:"], a[href^="mailto:"]').click(function() {
+        event.preventDefault();
+        window.location.href = "/contacts.html";
+      });
+    };
+  </script>
+  
+</body>
+</html> 
