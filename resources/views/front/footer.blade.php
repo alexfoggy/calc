@@ -57,8 +57,8 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <p>Copyright 2021</p>
-                <a href="https://ejov.site/" target="_blank" class="created-by">
-                    EJOV PROJECT
+                <a href="https://loop.md/" target="_blank" class="created-by">
+                    Loop
                 </a>
             </div>
         </div>
